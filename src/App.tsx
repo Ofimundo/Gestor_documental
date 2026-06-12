@@ -1,5 +1,5 @@
 import { DocumentManager } from "@/components/document-manager"
 
-export default function Page() {
+export default function App() {
   return <DocumentManager />
 }

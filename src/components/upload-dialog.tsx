@@ -4,7 +4,7 @@ import type React from "react"
 import { useRef, useState, useEffect } from "react"
 import { UploadCloud, X, Loader2, CheckCircle2 } from "lucide-react"
 import type { DocumentItem, Folder } from "@/lib/types"
-import { inferDocumentType } from "@/lib/format"
+import { inferDocumentType, formatFileSize } from "@/lib/format"
 import {
   Dialog,
   DialogContent,
@@ -254,7 +254,7 @@ export function UploadDialog({ open, onOpenChange, folders, defaultFolderId, onU
             {/* Carpeta */}
             <div className="flex flex-col gap-2">
               <Label htmlFor="folder" className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Carpeta Destino</Label>
-              <Select value={folderId} onValueChange={setFolderId}>
+              <Select value={folderId} onValueChange={(val) => setFolderId(val ?? "")}>
                 <SelectTrigger id="folder" className="h-9">
                   <SelectValue placeholder="Selecciona una carpeta" />
                 </SelectTrigger>

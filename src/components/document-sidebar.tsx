@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { Folder as FolderIcon, FolderOpen, Files, Tag, Plus, Check, X, Sun, Moon, HardDrive, Trash2 } from "lucide-react"
-import Image from "next/image"
 import type { Folder } from "@/lib/types"
 import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
@@ -83,12 +82,9 @@ export function DocumentSidebar({
       {/* Encabezado Logo */}
       <div className="px-2 pt-1">
         <div className="flex items-center gap-2">
-          <Image
+          <img
             src="/ofilab-logo.png"
             alt="OFILAB"
-            width={1127}
-            height={527}
-            priority
             className="h-8 w-auto block dark:hidden"
           />
           {/* Logo alternativo de texto en degradado para dark mode en caso de que no tenga canal transparente oscuro */}

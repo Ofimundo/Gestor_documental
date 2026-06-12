@@ -499,7 +499,7 @@ export function DocumentPreviewDialog({
 
                 <div className="flex flex-col gap-1.5">
                   <Label htmlFor="edit-folder" className="text-[11px] font-semibold text-muted-foreground">Carpeta</Label>
-                  <Select value={editedFolderId} onValueChange={setEditedFolderId}>
+                  <Select value={editedFolderId} onValueChange={(val) => setEditedFolderId(val ?? "")}>
                     <SelectTrigger id="edit-folder" className="h-8.5">
                       <SelectValue placeholder="Selecciona una carpeta" />
                     </SelectTrigger>
