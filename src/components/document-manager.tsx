@@ -204,7 +204,7 @@ export function DocumentManager() {
         usedStorage={usedStorage}
       />
 
-      <main className="flex flex-1 flex-col overflow-hidden bg-ambient-glow">
+      <main className="flex min-h-0 flex-1 flex-col overflow-hidden bg-ambient-glow">
         {/* Encabezado con búsqueda y acción de subir */}
         <header className="flex flex-col gap-4 border-b border-border bg-card/40 backdrop-blur-md px-6 py-4">
           <div className="flex items-center justify-between gap-4">
@@ -290,7 +290,7 @@ export function DocumentManager() {
         </header>
 
         {/* Listado / Dashboard */}
-        <ScrollArea className="flex-1 bg-background/50">
+        <ScrollArea className="flex-1 min-h-0 bg-background/50">
           <div className="flex flex-col gap-6 px-6 py-6 max-w-6xl mx-auto">
             {/* RENDERIZAR DASHBOARD SI NO HAY FILTROS */}
             {isDashboardView && (
