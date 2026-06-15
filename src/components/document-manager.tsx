@@ -204,7 +204,7 @@ export function DocumentManager() {
         usedStorage={usedStorage}
       />
 
-      <main className="flex flex-1 flex-col overflow-hidden">
+      <main className="flex flex-1 flex-col overflow-hidden bg-ambient-glow">
         {/* Encabezado con búsqueda y acción de subir */}
         <header className="flex flex-col gap-4 border-b border-border bg-card/40 backdrop-blur-md px-6 py-4">
           <div className="flex items-center justify-between gap-4">
@@ -297,10 +297,12 @@ export function DocumentManager() {
               <div className="grid gap-6 animate-in fade-in duration-300">
                 {/* Métricas Principales */}
                 <div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
-                  <Card className="shadow-xs border-border bg-card">
+                  <Card className="shadow-sm border-border bg-card/90 border-t-2 border-t-[#2A3284] hover:border-[#2A3284]/50 hover:shadow-lg hover:shadow-[#2A3284]/5 hover:-translate-y-0.5 transition-all duration-300">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                       <CardTitle className="text-xs font-semibold text-muted-foreground uppercase">Documentos</CardTitle>
-                      <Files className="size-4 text-brand-start" />
+                      <div className="p-2 rounded-xl bg-[#2A3284]/10 text-[#2A3284] dark:bg-[#2A3284]/20 dark:text-[#5f69d9] shrink-0">
+                        <Files className="size-4" />
+                      </div>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-extrabold text-foreground">{documents.length}</div>
@@ -308,10 +310,12 @@ export function DocumentManager() {
                     </CardContent>
                   </Card>
 
-                  <Card className="shadow-xs border-border bg-card">
+                  <Card className="shadow-sm border-border bg-card/90 border-t-2 border-t-[#70317A] hover:border-[#70317A]/50 hover:shadow-lg hover:shadow-[#70317A]/5 hover:-translate-y-0.5 transition-all duration-300">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                       <CardTitle className="text-xs font-semibold text-muted-foreground uppercase">Carpetas</CardTitle>
-                      <FolderOpen className="size-4 text-brand-center" />
+                      <div className="p-2 rounded-xl bg-[#70317A]/10 text-[#70317A] dark:bg-[#70317A]/20 dark:text-[#a95cb8] shrink-0">
+                        <FolderOpen className="size-4" />
+                      </div>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-extrabold text-foreground">{totalFoldersCount}</div>
@@ -319,10 +323,12 @@ export function DocumentManager() {
                     </CardContent>
                   </Card>
 
-                  <Card className="shadow-xs border-border bg-card">
+                  <Card className="shadow-sm border-border bg-card/90 border-t-2 border-t-[#D2446A] hover:border-[#D2446A]/50 hover:shadow-lg hover:shadow-[#D2446A]/5 hover:-translate-y-0.5 transition-all duration-300">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                       <CardTitle className="text-xs font-semibold text-muted-foreground uppercase">Almacenamiento</CardTitle>
-                      <HardDrive className="size-4 text-brand-end" />
+                      <div className="p-2 rounded-xl bg-[#D2446A]/10 text-[#D2446A] dark:bg-[#D2446A]/20 dark:text-[#e86f91] shrink-0">
+                        <HardDrive className="size-4" />
+                      </div>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-extrabold text-foreground">{formatFileSize(usedStorage)}</div>
@@ -330,10 +336,12 @@ export function DocumentManager() {
                     </CardContent>
                   </Card>
 
-                  <Card className="shadow-xs border-border bg-card">
+                  <Card className="shadow-sm border-border bg-card/90 border-t-2 border-t-amber-500 hover:border-amber-500/50 hover:shadow-lg hover:shadow-amber-500/5 hover:-translate-y-0.5 transition-all duration-300">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                       <CardTitle className="text-xs font-semibold text-muted-foreground uppercase">Destacados</CardTitle>
-                      <Star className="size-4 text-amber-500 fill-amber-500" />
+                      <div className="p-2 rounded-xl bg-amber-500/10 text-amber-600 dark:bg-amber-500/20 dark:text-amber-400 shrink-0">
+                        <Star className="size-4 fill-amber-500/40" />
+                      </div>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-extrabold text-foreground">{favoritesCount}</div>
@@ -344,7 +352,7 @@ export function DocumentManager() {
 
                 {/* Estadísticas de distribución por tipo */}
                 <div className="grid gap-6 md:grid-cols-3">
-                  <Card className="md:col-span-2 shadow-xs border-border bg-card">
+                  <Card className="md:col-span-2 shadow-sm border-border bg-card/90 border-t-2 border-t-brand-center hover:border-brand-center/50 hover:shadow-md transition-all duration-300">
                     <CardHeader className="pb-3">
                       <CardTitle className="text-sm font-bold text-foreground">Distribución por Tipo de Archivo</CardTitle>
                     </CardHeader>
@@ -376,7 +384,7 @@ export function DocumentManager() {
                   </Card>
 
                   {/* Acciones Rápidas */}
-                  <Card className="shadow-xs border-border bg-card flex flex-col justify-between">
+                  <Card className="shadow-sm border-border bg-card/90 flex flex-col justify-between border-t-2 border-t-brand-end hover:border-brand-end/50 hover:shadow-md transition-all duration-300">
                     <CardHeader className="pb-3">
                       <CardTitle className="text-sm font-bold text-foreground">Acción Rápida</CardTitle>
                     </CardHeader>

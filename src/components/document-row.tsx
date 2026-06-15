@@ -30,7 +30,7 @@ export function DocumentRow({
   onToggleFavorite,
 }: DocumentRowProps) {
   return (
-    <div className="group/row flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 transition-all duration-200 hover:border-brand-center/40 hover:bg-accent/30 hover:shadow-xs">
+    <div className="group/row flex items-center gap-3 rounded-xl border border-border bg-card/90 px-4 py-3 transition-all duration-300 hover:border-brand-center/40 hover:bg-linear-to-r hover:from-card hover:to-brand-center/[0.04] hover:shadow-md hover:-translate-y-[1px]">
       {/* Botón Favorito Rápido */}
       <button
         type="button"

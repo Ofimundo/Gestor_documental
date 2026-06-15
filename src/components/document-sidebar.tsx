@@ -80,19 +80,26 @@ export function DocumentSidebar({
   return (
     <aside className="flex w-64 shrink-0 flex-col gap-5 border-r border-border bg-sidebar p-4 select-none">
       {/* Encabezado Logo */}
-      <div className="px-2 pt-1">
-        <div className="flex items-center gap-2">
+      <div className="px-2 pt-2 pb-1">
+        <div className="flex items-center gap-2.5">
           <img
             src="/ofilab-logo.png"
             alt="OFILAB"
-            className="h-8 w-auto block dark:hidden"
+            className="h-11 w-auto block dark:hidden"
           />
-          {/* Logo alternativo de texto en degradado para dark mode en caso de que no tenga canal transparente oscuro */}
-          <span className="hidden dark:block text-2xl font-bold tracking-tight text-brand-gradient">
-            OFILAB
-          </span>
+          {/* Logo alternativo de icono + texto en dark mode */}
+          <div className="hidden dark:flex items-center gap-2">
+            <img
+              src="/ofilab-icon.png"
+              alt="OFILAB Icon"
+              className="h-9 w-auto"
+            />
+            <span className="text-3xl font-black tracking-tighter text-brand-gradient">
+              OFILAB
+            </span>
+          </div>
         </div>
-        <p className="mt-1 text-xs font-semibold tracking-wider uppercase text-brand-gradient">
+        <p className="mt-1.5 text-[10px] font-extrabold tracking-widest uppercase text-brand-gradient/80">
           Gestor Documental
         </p>
       </div>
@@ -175,10 +182,10 @@ export function DocumentSidebar({
               <div
                 key={folder.id}
                 className={cn(
-                  "group flex items-center justify-between rounded-lg px-3 py-1.5 text-sm transition-all duration-200",
+                  "group flex items-center justify-between rounded-lg py-1.5 text-sm transition-all duration-200",
                   isActive
-                    ? "bg-sidebar-accent font-medium text-sidebar-accent-foreground"
-                    : "text-sidebar-foreground hover:bg-sidebar-accent/60"
+                    ? "bg-sidebar-accent font-semibold text-brand-center border-l-2 border-brand-center pl-2.5 pr-3 shadow-2xs"
+                    : "px-3 text-sidebar-foreground hover:bg-sidebar-accent/60"
                 )}
               >
                 <button

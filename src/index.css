@@ -83,13 +83,13 @@
   --chart-4: oklch(0.39 0.13 308);
   --chart-5: oklch(0.34 0.1 300);
   --radius: 0.75rem;
-  --sidebar: oklch(0.985 0.002 286);
+  --sidebar: oklch(0.97 0.012 286);
   --sidebar-foreground: oklch(0.25 0.015 286);
   --sidebar-primary: #70317A;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: oklch(0.95 0.005 286);
+  --sidebar-accent: oklch(0.93 0.025 286);
   --sidebar-accent-foreground: oklch(0.25 0.015 286);
-  --sidebar-border: oklch(0.91 0.005 286);
+  --sidebar-border: oklch(0.91 0.015 286);
   --sidebar-ring: #70317A;
 }
 
@@ -124,13 +124,13 @@
   --chart-3: #e05c82;
   --chart-4: oklch(0.39 0.13 308);
   --chart-5: oklch(0.34 0.1 300);
-  --sidebar: oklch(0.18 0.01 286);
+  --sidebar: oklch(0.13 0.018 286);
   --sidebar-foreground: oklch(0.97 0.005 286);
   --sidebar-primary: #8f429c;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: oklch(0.22 0.01 286);
+  --sidebar-accent: oklch(0.20 0.035 286);
   --sidebar-accent-foreground: oklch(0.97 0.005 286);
-  --sidebar-border: oklch(0.24 0.01 286);
+  --sidebar-border: oklch(0.18 0.025 286);
   --sidebar-ring: #8f429c;
 }
 
@@ -149,6 +149,18 @@
   .hover-brand-gradient:hover {
     background: var(--brand-gradient);
     color: white !important;
+  }
+  .bg-ambient-glow {
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(112, 49, 122, 0.04) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(42, 50, 132, 0.04) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(210, 68, 106, 0.02) 0px, transparent 50%);
+  }
+  .dark .bg-ambient-glow {
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(143, 66, 156, 0.12) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(59, 69, 176, 0.12) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(224, 92, 130, 0.08) 0px, transparent 50%);
   }
 }
 
